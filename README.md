@@ -51,13 +51,15 @@ This project does only implement step 2. However, both steps can be considered i
    
    `git clone --recurse-submodules https://github.com/LordKobra/HDR-Swapchain-Prototypes.git`
 
-2. The project is configured and built via CMake. CMake will require console-level access to the slangc compiler.
+2. The project is configured and built via CMake. 
+   * CMake will require console-level access to the slangc compiler.
+   * use gcc/g++ on Linux / msvc on Windows
 
-(Windows) For the Windows SDK to work, you need to set the correct paths in the user settings at the top of the CMakeLists.txt
+   (Windows) For the Windows SDK to work, you need to set the correct paths in the user settings at the top of the CMakeLists.txt
 
-(Optional) The vk_enum_string_helper.h in the include folder is used to identify the colorspaces and formats. It has been modified to avoid compilation issues. Should it still bug with your version of the Vulkan SDK, go [here](https://github.com/KhronosGroup/Vulkan-Utility-Libraries/commits/main/include/vulkan/vk_enum_string_helper.h) and find the commit matching your Vulkan SDK version.
+   (Optional) The vk_enum_string_helper.h in the include folder is used to identify the colorspaces and formats. It has been modified to avoid compilation issues. Should it still bug with your version of the Vulkan SDK, go [here](https://github.com/KhronosGroup/Vulkan-Utility-Libraries/commits/main/include/vulkan/vk_enum_string_helper.h) and find the commit matching your Vulkan SDK version.
 
-(Optional / Linux) We need to compile the Wayland protocols. For simplicity they are supplied in the wayland_protocols folder. If you have issues or want to be up-to-date, make sure you replace them with the system-supplied protocols. On my system they are located in `/usr/share/wayland-protocols/`
+   (Optional / Linux) We need to compile the Wayland protocols. For simplicity they are supplied in the wayland_protocols folder. If you have issues or want to be up-to-date, make sure you replace them with the system-supplied protocols. On my system they are located in `/usr/share/wayland-protocols/`
 
 3. build the project with CMake.
 
