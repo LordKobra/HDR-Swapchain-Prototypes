@@ -1,0 +1,19 @@
+CompileFlags:
+    CompilationDatabase: build
+    Add: 
+    [
+        -D__CLANGD__,
+        /std:c++latest,
+        -Wno-unknown-warning-option
+    ]
+
+    Remove:
+    [
+        -m*,
+        -f*
+    ]
+
+Diagnostics:
+    Suppress: builtin_definition
+    ClangTidy:
+        Add: google-build-using-namespace
