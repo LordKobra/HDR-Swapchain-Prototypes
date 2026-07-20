@@ -1,0 +1,6 @@
+[submodule "imgui"]
+	path = imgui
+	url = https://github.com/ocornut/imgui
+[submodule "DirectX-Headers"]
+	path = DirectX-Headers
+	url = https://github.com/microsoft/DirectX-Headers
